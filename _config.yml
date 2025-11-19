@@ -1,0 +1,26 @@
+title: Iain Cambridge
+email: iain@iain.rocks
+description: >- # this means to ignore newlines until "baseurl:"
+  The technical musings of Iain Cambridge.
+baseurl: ""  
+url: "https://iain.rocks"
+github_username:  that-guy-iain
+permalink: /blog/:year:/:month/:day/:slug
+
+# Build settings
+theme: jekyll-bear-theme
+
+
+plugins:
+  - jekyll-feed
+
+sidebar:
+  - name: GitHub
+    icon: <i class="fa-brands fa-github"></i>
+    link: https://github.com/that-guy-iain
+
+links:
+    About: /about
+    Categories: /categories    
+
+Blog: /blog    
