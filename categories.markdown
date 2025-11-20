@@ -1,12 +1,8 @@
 ---
 layout: page
-title: Blog By Categories
+title: Archive By Category
 permalink: /categories/
 ---
-# Archive By Category
-{% comment %}
-  1. Generate a comprehensive list of all unique categories used in site.posts
-{% endcomment %}
 {% assign all_categories = "" %}
 {% for post in site.posts %}
   {% assign post_categories = post.categories | join:'|' %}
@@ -15,9 +11,6 @@ permalink: /categories/
 
 {% assign unique_categories = all_categories | split:'|' | uniq | sort %}
 
-{% comment %}
-  2. Loop through the unique categories and filter posts for each one
-{% endcomment %}
 {% for category in unique_categories %}
   {% comment %} Skip empty strings if they exist after splitting/joining {% endcomment %}
   {% unless category == empty %}
@@ -25,7 +18,7 @@ permalink: /categories/
     {% comment %} Find all posts where the post's categories array includes the current category {% endcomment %}
     {% assign posts_in_category = site.posts | where_exp: "post", "post.categories contains category" %}
 
-<h2># {{ category | capitalize }} ({{ posts_in_category | size }})</h2>
+<h2># {{ category  }} ({{ posts_in_category | size }})</h2>
 <ul class="post-list">
 {% for post in posts_in_category %}
 <li>

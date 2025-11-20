@@ -5,7 +5,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: ""  
 url: "https://iain.rocks"
 github_username:  that-guy-iain
-permalink: /blog/:year:/:month/:day/:slug
+permalink: /blog/:year/:month/:day/:slug
 
 # Build settings
 theme: jekyll-bear-theme
@@ -20,7 +20,13 @@ sidebar:
     link: https://github.com/that-guy-iain
 
 links:
-    About: /about
     Categories: /categories    
 
 Blog: /blog    
+
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge

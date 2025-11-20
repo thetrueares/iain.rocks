@@ -2,15 +2,13 @@
 layout: default
 title: Home
 ---
+This is the personal site of Iain Cambridge, a software developer based in Berlin. Who in his spare time works on the Open Source project <a href="https://github.com/getparthenon" target="_blank">Parthenon</a> and the Source Avaulable billing project <a href="https://github.com/billabear" target="_blank">BillaBear.</a>
 
-# Blog
+# Latest Blog Posts
 
 <ul>
 {% for post in site.posts limit: 5 %}
-    <li>
-      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-      <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
-      <p>{{ post.excerpt }}</p>
+    <li><a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%b %-d, %Y" }}
     </li>
   {% endfor %}
 </ul>

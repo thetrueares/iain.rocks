@@ -3,13 +3,9 @@ layout: page
 title: Blog Archive
 permalink: /blog/
 ---
-
-# Archive
-
 {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
-
 {% for year in posts_by_year %}
-  ### {{ year.name }}
+  <h2># {{ year.name }}</h2>
   <ul class="post-list">
     {% for post in year.items %}
       <li>
