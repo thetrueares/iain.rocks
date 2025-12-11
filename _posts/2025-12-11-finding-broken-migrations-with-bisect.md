@@ -5,7 +5,7 @@ date: "2025-12-11 12:50:40 +0200"
 categories: [AI]
 author: Iain Cambridge
 ---
-I just watched [Pauline Vos'](https://gitlegit.dev/) ["The Business of Bisecting"](https://www.youtube.com/watch?v=uzog0BTLrYY) talk, and one of the questions from the audience really stuck with me. During the section on automating good/bad commit checks with a script, someone asked if git passes the commit hash of the previous commit to the script, which it doesn't. But the question was the wrong one. The real question should be "Can you get the hash of the previous commit?" Which you can. And it's super useful if you want to check if a migration or something similar is broken.
+I just watched [Pauline Vos'](https://gitlegit.dev/){:target="_blank"}  ["The Business of Bisecting"](https://www.youtube.com/watch?v=uzog0BTLrYY){:target="_blank"}  talk, and one of the questions from the audience really stuck with me. During the section on automating good/bad commit checks with a script, someone asked if git passes the commit hash of the previous commit to the script, which it doesn't. But the question was the wrong one. The real question should be "Can you get the hash of the previous commit?" Which you can. And it's super useful if you want to check if a migration or something similar is broken.
 
 # What is bisect
 
