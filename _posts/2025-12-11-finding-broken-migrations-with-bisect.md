@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Finding broken migrations with Bisect"
-date: "2025-08-19 06:18:40 +0200"
+date: "2025-12-11 12:50:40 +0200"
 categories: [AI]
 author: Iain Cambridge
 ---
