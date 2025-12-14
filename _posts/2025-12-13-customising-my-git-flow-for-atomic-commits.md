@@ -17,17 +17,23 @@ The benefits include:
 
 - Easier code reviews since you can review each commit independently
 - Better ability to use bisect since every commit passes tests
-- The option to do trunk-based development where everyone pushes directly to the main branch
+- The option to do trunk-based development, where everyone pushes directly to the main branch
 
 # The Problem
 
 I currently develop using a pattern where I start with a functional test that I make fail. Then I drill into the entry point in the application and build units of code, doing TDD on those units until I eventually make the functional test pass. This means my working branch always has code that doesn't belong to the logical unit of code that should be contained within atomic commits.
 
-So naturally I asked what atomic commits are actually doing, since this probably wasn't just a me problem. Turns out there are various approaches. One is Stacked Diffs, which I haven't learned yet. Another is reordering commits and pushing for WIP, which sounds like a lot of work. And then there were some truly wild options. So my solutions had these flaws: 'I don't know how to do that yet', 'I'm too lazy for that', or 'I'm not that foolish'.
+So naturally I asked what atomic commits are actually doing, since this probably wasn't just a me problem. Turns out there are various approaches. One is Stacked Diffs, which I think is overkill for when you're just working on a single reviewable feature which needs multiple commits. Another is reordering commits and pushing for WIP, which sounds like a lot of work. And then there were some truly wild options. 
+
+I think the other solutions are fundamentally workarounds, and here's why. They both work off the concept that there is going to be code that is not going to pass the build and that we will intentionally splinter off from that broken state. Either we specially craft our PRs in a very particular way to hide the broken commits, or we use special code review tools and processes to work around the fact that we're not being pure in our actions and intentions. Meanwhile, atomic commits are all about being pure from the start – every single commit should be complete, functional, and able to stand on its own. With atomic commits, each commit represents a complete, working change that builds successfully and passes all tests. There's no broken state to hide or work around because every step of the way, the codebase remains in a valid, deployable state.
 
 # The Solution
 
-In true developer fashion, I decided that instead of learning something, I'd just write some scripts to automate it instead.
+For me, the fundamental problem is that we're using git wrong. Git has the features we need—if we use them correctly, this issue goes away completely. We're relying on one feature to do everything when we should be using two distinct features that were each designed for specific purposes. Right now, we're using commits for both storing WIP code and tracking code we actually want to preserve in our project history. This conflates two very different use cases and creates confusion about what our commit history actually represents.
+
+Instead, we should use the stash functionality that git provides specifically for temporary work. Stash was designed to store files while we switch branches, and that's the only time you really need your WIP code set aside temporarily. It's a perfect fit for this scenario. So we'd stage and commit only the ready code—code that's been tested, reviewed, and is genuinely ready to become part of the permanent project history. We'd push those meaningful commits to share them with the team. And we'd stash our work-in-progress code whenever we need to switch contexts or jump to a different branch to handle an urgent bug fix or review someone else's code.
+
+If we do it correctly by hand, that's a lot of git commands and tons of work. So realistically, no one with a brain is going to do it. Which is why no one is doing it and are doing the other approaches. I would rather just automate the tricky things and try and blend it in as easy as possible to my workflow. I find if people need to go out of their way too much they will just refuse to do it despite the benefits. If things just work, they will be used and solve problems. This is my first attempt at something that just works.
 
 I needed a solution that:
 
@@ -90,4 +96,4 @@ git wcommit -am "Final changes"
 
 ## Repository
 
-You can find the scripts at https://github.com/that-guy-iain/git-scripts.
+You can find the scripts at [https://github.com/that-guy-iain/git-attomic](https://github.com/that-guy-iain/git-attomic).
