@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What is serverless and should you be using it"
-date: "2021-09-05"
+date: "2021-10-05"
 slug: what-is-serverless-and-should-you-be-using-it
 authors: [iain]
 categories: [serverless, 'Non-Technical Founder']
