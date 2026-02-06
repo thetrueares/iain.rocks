@@ -11,7 +11,7 @@ I just watched [Pauline Vos'](https://gitlegit.dev/){:target="_blank"}  ["The Bu
 
 The best way to learn is to watch ["The Business of Bisecting"](https://www.youtube.com/watch?v=uzog0BTLrYY), since that's literally what I watched to learn. But here's the quick version for those just wanting to read.
 
-Bisect helps you trace through commits to find where something changed. It's incredibly powerful and can save you hours of manually searching through code. Say you want to find when a test started breaking locally while still passing in CI—a frustrating scenario where the culprit isn't immediately obvious.
+Bisect helps you trace through commits to find where something changed. It's incredibly powerful and can save you hours of manually searching through code. Say you want to find when a test started breaking locally while still passing in CI — a frustrating scenario where the culprit isn't immediately obvious.
 
 You start by marking a commit as "good" where you know everything worked. This becomes your baseline. Then you check each commit to see if it works or not. Git uses binary search to efficiently narrow down the problem, so you won't check every single commit. Mark each one good or bad, and git intelligently picks the next commit to check, cutting the search space in half each time. You can automate this entire process with a script, saving yourself hours of tedious work. A bash script handles all the repetitive tasks automatically. Once you've set it up, the script runs through each step without any intervention, freeing you up to focus on more important things.
 
