@@ -96,4 +96,4 @@ git acommit -am "Final changes"
 
 ## Repository
 
-You can find the scripts at [https://github.com/that-guy-iain/git-atomic](https://github.com/that-guy-iain/git-atomic).
+You can find the scripts at [https://codeberg.org/that-guy-iain/git-atomic](https://codeberg.org/that-guy-iain/git-atomic).
