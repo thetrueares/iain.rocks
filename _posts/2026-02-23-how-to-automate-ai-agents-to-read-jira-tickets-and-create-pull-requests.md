@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My AI Guidelines"
+title: "How to automate AI agents to read JIRA tickets and create pull requests"
 date: "2026-02-23 12:50:40 +0200"
 categories: ["AI"]
 author: Iain Cambridge
