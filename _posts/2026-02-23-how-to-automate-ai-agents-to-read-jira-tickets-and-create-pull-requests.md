@@ -12,7 +12,7 @@ me to be able to have the agent do stuff while not doing all of the things I usu
 normally when I'm experimenting or trying to fix something when the agent messes up and I
 stop it half way through.
 
-These have been tested on Junie, Claude, and Gemini. Using using these files you're able to do the follow:
+These have been tested on Junie, Claude, and Gemini. Using these files you're able to do the follow:
 
 `Please work on ticket DEVHELM-144`.
 
@@ -40,7 +40,7 @@ Basic Flow for a feature is as follows:
 * Create a new branch from main for your feature with the name of the branch based on the feature you are working on.
 * Make changes to the code.
 * Stage the changes with `git add .` or `git add <specific files>`.
-* Commit the changes with a descriptive message using `git commit -m "Your message here"
+* Commit the changes with a descriptive message using `git commit -m "Your message here"`
 * Push the changes to the remote repository with `git push origin <branch-name>`
 * Create a pull request (PR) to merge your changes into the main branch if one doesn't exist
 

@@ -2,9 +2,9 @@
 layout: default
 title: Home
 ---
-This is the personal site of Iain Cambridge, a software developer based in Berlin. Who in his spare time works on the Open Source project <a href="https://github.com/getparthenon" target="_blank">Parthenon</a> and the Source Avaulable billing project <a href="https://github.com/billabear" target="_blank">BillaBear.</a>
+This is the personal site of Iain Cambridge, a software developer based in Berlin. Who in his spare time works on the Open Source project <a href="https://github.com/getparthenon" target="_blank">Parthenon</a> and the Source Available billing project <a href="https://github.com/billabear" target="_blank">BillaBear.</a>
 
-You can contact me at iain@icambridge.me. 
+You can contact me at me@icambridge.me. 
 
 # Latest Blog Posts
 
