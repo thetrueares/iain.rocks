@@ -2,7 +2,7 @@
 layout: post
 title: "Don't couple your Go code to GitHub"
 date: "2026-09-27 12:50:40 +0200"
-categories: ["go"]
+categories: ["Go Lang"]
 author: Iain Cambridge
 ---
 One of the good features of Go is that you namespace your code with the location to fetch the code. This means if you host your Go code at http://github.com/thetrueares/boneclone then you have the line import "github.com/thetrueares/boneclone" and Go will fetch it using git. This makes it super easy to know where to go to report bugs for open source libraries and really easy to fetch and distribute go libraries without a centralised package management system. For many, it’s literally the location of the git hosting, but this has some downsides, and you should use your own custom domain, and I’ll explain why.
